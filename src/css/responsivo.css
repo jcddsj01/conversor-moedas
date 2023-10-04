@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    .container .container-box:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        height: auto;
+    }
+}

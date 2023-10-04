@@ -1,0 +1,111 @@
+:root {
+    --font: 'Mukta', sans-serif;
+
+    --color: #fff8ff;
+    --color-secundaria: #111;
+    --color-terciaria: #01AB8E;
+
+    --background-color: #fff8ff;
+    --background-color-secundaria: #01AB8E;
+    --background-color-terciaria: #eae4ea;
+    
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--background-color);
+    color: var(--color-secundaria);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--background-color);
+    border-radius: 2px;
+    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.1);
+}
+
+.container .header {
+    text-align: center;
+    background-color: var(--background-color-secundaria);
+    color: var(--color);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 10px;
+}
+
+.container .container-box {
+    display: flex;
+    flex-direction: row;
+    color: var(--color-secundaria);
+    margin: 10px 20px;
+}
+
+.container .container-box:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.container .container-box:nth-child(3) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.conversao-moeda {
+    font-size: 1.6em;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.container-box label,
+p {
+    font-size: 1.4em;
+}
+
+.container-box input {
+    background-color: var(--background-color-terciaria);
+    border: none;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.container-box input:focus {
+    outline: none;
+}
+
+.container-box .conversao-moeda {
+    text-transform: uppercase;
+}
+
+.container-box .botao-converter {
+    background-color: var(--background-color-secundaria);
+    color: var(--color);
+    font-size: 1em;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.container-box .botao-converter:hover {
+    background-color: var(--background-color);
+    border: 1px solid var(--color-terciaria);
+    color: var(--background-color-secundaria);
+}
