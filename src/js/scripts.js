@@ -1,5 +1,5 @@
 // Chave da API ExchangeRate-API
-const chave_API = '1bf09bc689c8c92878947f08';
+const chave_API = "1bf09bc689c8c92878947f08";
 
 const conversaoMoeda = document.getElementById("conversao-moeda");
 const inputMoedaEntrada = document.getElementById("moeda-entrada");
@@ -63,7 +63,7 @@ async function converterUSDparaBRL(quantia) {
         const valorEmBRL = quantia * exchangeRate;
 
         // Retorna o valor em BRL com duas casas decimais
-        return valorEmBRL.toLocaleString('pt-BR', {style: 'decimal', currency: 'BRL', minimumFractionDigits: 2}) + ' BRL';
+        return valorEmBRL.toLocaleString('pt-BR', {style: 'decimal', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' BRL';
     } catch (error) {
         // Exibi o erro no console
         console.error(error.message);
